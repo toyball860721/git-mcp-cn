@@ -1,0 +1,26 @@
+{
+  "name": "git-mcp-cn",
+  "version": "1.0.0",
+  "description": "GitMCP 中文文档与快速配置指南 - 消除 AI 代码幻觉，访问最新 GitHub 文档",
+  "keywords": [
+    "gitmcp",
+    "mcp",
+    "github",
+    "documentation",
+    "chinese",
+    "cursor",
+    "claude-code",
+    "ai-assistant",
+    "no-hallucination"
+  ],
+  "author": "toyball <toyball860721@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toyball860721/git-mcp-cn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toyball860721/git-mcp-cn/issues"
+  },
+  "homepage": "https://github.com/toyball860721/git-mcp-cn#readme"
+}
