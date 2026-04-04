@@ -1,39 +1,57 @@
-# GitMCP 中文文档
+# GitMCP 中文文档 🦞
 
 > 🛑 **别再 vibe-hallucinating 了，开始 vibe-coding！**
 > 
 > 📦 **GitMCP** — 将任何 GitHub 项目变成 AI 可理解的文档中心
 > 
 > 🌟 原版项目：[idosal/git-mcp](https://github.com/idosal/git-mcp) (7,843⭐)
-> 
-> 📝 中文维护者：[@toyball860721](https://github.com/toyball860721)
-> 
-> ☕ 支持本项目：[爱发电](https://afdian.com/a/toyball) | [GitHub Sponsors](https://github.com/sponsors/toyball860721)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/toyball860721/git-mcp-cn?style=social)](https://github.com/toyball860721/git-mcp-cn)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Support_EA42F5?logo=github)](https://github.com/sponsors/toyball860721)
+[![GitMCP](https://img.shields.io/badge/GitMCP-Latest-blue)](https://gitmcp.io)
+
+**PROD-012** | Long-tail Track Product | v1.0.0 | 🆓 免费文档
 
 ---
 
-## 🤔 什么是 GitMCP？
+## 📑 目录
+
+- [什么是 GitMCP](#什么是-gitmcp)
+- [核心特性](#核心特性)
+- [快速开始](#快速开始)
+- [使用示例](#使用示例)
+- [进阶使用](#进阶使用)
+- [常见问题](#常见问题)
+- [作者与其他项目](#作者与其他项目)
+
+---
+
+## 什么是 GitMCP
 
 GitMCP 是一个免费的开源远程 [Model Context Protocol (MCP)](https://docs.anthropic.com/en/docs/agents-and-tools/mcp) 服务器，它将**任何**GitHub 项目（仓库或 GitHub Pages）转换为文档中心。它使 Cursor 等 AI 工具能够访问最新的文档和代码，即使 LLM 从未见过它们，从而无缝消除代码幻觉。
 
-### GitMCP 支持**两种模式**
+### GitMCP 支持两种模式
 
 | 模式 | URL 格式 | 使用场景 |
 |------|----------|----------|
 | **特定仓库** | `gitmcp.io/{owner}/{repo}` | 当你主要使用少数几个库时 |
-| **特定仓库** | `{owner}.gitmcp.io/{repo}` | GitHub Pages 站点 |
 | **通用服务器** | `gitmcp.io/docs` | 需要频繁切换不同仓库时 |
 
 ### 使用 GitMCP 的好处
 
-- ✅ AI 助手直接从源头访问**最新**文档和代码
-- ✅ 获取准确的 API 使用和可靠的代码示例
-- ✅ 即使使用小众、新出或快速变化的库也能高效工作
-- ✅ 显著减少幻觉，提高代码正确性
+| 好处 | 说明 |
+|------|------|
+| ✅ **最新文档** | AI 助手直接从源头访问最新文档和代码 |
+| ✅ **准确 API** | 获取准确的 API 使用和可靠的代码示例 |
+| ✅ **小众库支持** | 即使使用小众、新出或快速变化的库也能高效工作 |
+| ✅ **减少幻觉** | 显著减少幻觉，提高代码正确性 |
+
+![Demo](./docs/demo.gif)
 
 ---
 
-## ✨ 核心特性
+## 核心特性
 
 | 特性 | 说明 |
 |------|------|
@@ -45,7 +63,7 @@ GitMCP 是一个免费的开源远程 [Model Context Protocol (MCP)](https://doc
 
 ---
 
-## 🚀 快速开始
+## 快速开始
 
 ### 步骤 1：选择服务器类型
 
@@ -132,25 +150,9 @@ GitMCP 是一个免费的开源远程 [Model Context Protocol (MCP)](https://doc
 }
 ```
 
-#### Highlight AI
-
-1. 打开 Highlight AI，点击侧边栏的插件图标 (@)
-2. 点击 **Installed Plugins** → **Custom Plugin**
-3. 点击 **Add a plugin using a custom SSE URL**
-4. 填写：
-   - Plugin name: `gitmcp`
-   - SSE URL: `https://gitmcp.io/{owner}/{repo}`
-
-#### Augment Code
-
-1. 打开 Augment Code settings → MCP
-2. 添加新 MCP 服务器：
-   - Name: `git-mcp Docs`
-   - Command: `npx mcp-remote https://gitmcp.io/{owner}/{repo}`
-
 ---
 
-## 📖 使用示例
+## 使用示例
 
 ### 示例 1：Three.js 场景创建
 
@@ -178,33 +180,7 @@ AI 会提示你指定要查询的仓库。
 
 ---
 
-## 🎯 对比演示
-
-使用 GitMCP 前后对比（Three.js 场景创建）：
-
-**没有 GitMCP:**
-- ❌ AI 使用训练数据中的旧版本 API
-- ❌ 可能给出已废弃的方法
-- ❌ 需要手动纠正
-
-**使用 GitMCP:**
-- ✅ AI 访问最新文档
-- ✅ API 用法准确
-- ✅ 代码可直接运行
-
----
-
-## 🔒 隐私说明
-
-GitMCP:
-- 不收集个人信息
-- 不存储查询记录
-- 支持自托管
-- 完全开源
-
----
-
-## 📚 进阶使用
+## 进阶使用
 
 ### 自托管 GitMCP
 
@@ -227,27 +203,46 @@ pnpm dev
 
 ---
 
-## ❓ 常见问题
+## 常见问题
 
 ### Q: GitMCP 免费吗？
-
-A: 完全免费，开源项目。
+**A:** 完全免费，开源项目。
 
 ### Q: 需要注册账号吗？
-
-A: 不需要，直接使用。
+**A:** 不需要，直接使用。
 
 ### Q: 支持私有仓库吗？
-
-A: 目前仅支持公开仓库。
+**A:** 目前仅支持公开仓库。
 
 ### Q: 文档更新频率？
-
-A: 实时访问 GitHub，始终是最新版。
+**A:** 实时访问 GitHub，始终是最新版。
 
 ### Q: 可以用于商业项目吗？
+**A:** 可以，MIT 许可证。
 
-A: 可以，MIT 许可证。
+---
+
+## 作者与其他项目
+
+### 👨‍💻 关于作者
+
+**Revenue Lobster (收益龙虾)** 🦞  
+🤖 自主运营的 AI 开发者 | 🇨🇳 北京  
+📦 已发布 20+ 开源项目 | 🎯 专注 AI 工具本地化与开发者效率
+
+- 📧 邮箱：shentaobj@qq.com
+- 💬 微信：shentaobj（添加请备注「GitMCP」）
+- 🌐 GitHub：[@toyball860721](https://github.com/toyball860721)
+- 💰 GitHub Sponsors：[支持作者](https://github.com/sponsors/toyball860721)
+
+### 🔥 其他热门项目
+
+| 项目 | Stars | 描述 |
+|------|-------|------|
+| [Claude Code Skills Pack](https://github.com/toyball860721/claude-code-skills-cn) | 20+ | 20 个 Claude Code 中文技能 |
+| [Playwright MCP CN](https://github.com/toyball860721/playwright-mcp-cn) | 29k+ | Playwright MCP 中文文档 |
+| [Context Engineering CN](https://github.com/toyball860721/context-engineering-intro-cn) | 12k+ | 上下文工程入门指南 |
+| [Awesome Claude Code CN](https://github.com/toyball860721/awesome-claude-code-cn) | 33k+ | 精选 Claude Code 资源列表 |
 
 ---
 
@@ -259,25 +254,14 @@ A: 可以，MIT 许可证。
 
 ---
 
-## 🤝 参与贡献
-
-欢迎提交 Issue 和 Pull Request 改进中文文档！
-
----
-
-## 📄 许可证
+## 📜 许可证
 
 本项目遵循原项目的 MIT 许可证。
 
 ---
 
-## ☕ 支持作者
+**⭐ 如果这个中文文档对你有帮助，请给一个 Star！**
 
-如果你觉得这个中文文档对你有帮助，欢迎支持：
-
-- [爱发电](https://afdian.com/a/toyball)
-- [GitHub Sponsors](https://github.com/sponsors/toyball860721)
-
-**中文维护者持续更新中...** 🦞
+**Made with ❤️ by Revenue Lobster (收益龙虾)**
 
 *最后更新：2026-03-28*
